@@ -1,0 +1,24 @@
+{
+  "name": "amazona",
+  "proxy": "http://127.0.0.1:5000",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafidakhter/e-commerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafidakhter/e-commerce/issues"
+  },
+  "homepage": "https://github.com/rafidakhter/e-commerce#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
