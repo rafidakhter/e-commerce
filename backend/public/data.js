@@ -1,7 +1,23 @@
+var bcrypt = require("bcryptjs");
+
 const data = {
+  users: [
+    {
+      name: "Rafid",
+      email: "admin@example.com",
+      password: bcrypt.hashSync("password", 8),
+      isAdmin: true,
+    },
+    {
+      name: "Kathy",
+      email: "user@example.com",
+      password: bcrypt.hashSync("password", 8),
+      isAdmin: false,
+    },
+  ],
+
   products: [
     {
-      id: "1",
       title: "Nike slim shirt",
       category: "Shirts",
       image: "/images/p1.jpg",
@@ -13,7 +29,6 @@ const data = {
       description: "high quality shirt",
     },
     {
-      id: "2",
       title: "Adidas shirt",
       category: "Shirts",
       image: "/images/p2.jpg",
@@ -25,7 +40,6 @@ const data = {
       description: "high quality shirt",
     },
     {
-      id: "3",
       title: "Lacoste shirt",
       category: "Shirts",
       image: "/images/p3.jpg",
@@ -37,7 +51,6 @@ const data = {
       description: "high quality shirt",
     },
     {
-      id: "4",
       title: "Nike slim pants",
       category: "Pants",
       image: "/images/p4.jpg",
@@ -49,7 +62,6 @@ const data = {
       description: "high quality pants",
     },
     {
-      id: "5",
       title: "Adidas pants",
       category: "pants",
       image: "/images/p5.jpg",
@@ -61,7 +73,6 @@ const data = {
       description: "high quality pants",
     },
     {
-      id: "6",
       title: "Lacoste pants",
       category: "pants",
       image: "/images/p6.jpg",

@@ -3,12 +3,24 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+var mongoose = require("mongoose");
 
+// importing routes from the routes folder
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 
 var app = express();
+
+// connecting to mongodb
+mongoose
+  .connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => console.log("Connected to MongoDB..."))
+  .catch((err) => console.error("Coudn't connect MongoDB....", err));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -20,6 +32,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// adding routes to the server
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/products", productsRouter);
