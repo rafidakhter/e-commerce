@@ -3,7 +3,11 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-var mongoose = require("mongoose");
+
+var mongoose = require("mongoose"); // to communicate with mongodb
+var dotenv = require("dotenv");
+
+dotenv.config();
 
 // importing routes from the routes folder
 var indexRouter = require("./routes/index");
@@ -11,6 +15,8 @@ var usersRouter = require("./routes/users");
 var productsRouter = require("./routes/products");
 
 var app = express();
+
+// importing env file
 
 // connecting to mongodb
 mongoose
