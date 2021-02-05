@@ -11,7 +11,7 @@ const expressAsyncHandler = require("express-async-handler"); // to handle async
 
 // importing user object made in model folder
 const User = require("../models/userModels.js");
-const generateToken = require("../utils/utils.js"); // function created to impliment jwswebtoken for securing data
+const { generateToken } = require("../utils/utils.js"); // function created to impliment jwswebtoken for securing data
 
 /////////////////////////middleware//////////////////////////////////
 
@@ -36,7 +36,6 @@ router.post(
   "/signin",
   expressAsyncHandler(async (req, res) => {
     const user = await User.findOne({ email: req.body.email });
-
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) {
         res.send({
@@ -46,6 +45,7 @@ router.post(
           isAdmin: user.isAdmin,
           token: generateToken(user), // creating a web token for securing web data, the above data will be encryted into a string
         });
+        console.log(user.token);
         return;
       } else {
         res
