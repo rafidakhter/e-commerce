@@ -20,7 +20,7 @@ router.use(express.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(cors());
 
-//////////////////////////* Insert New User Into mongodb from data.js file. */////////////////////////////////////////
+//////////////////////////* Insert Order into MongoDB */////////////////////////////////////////
 router.post(
   "/",
   isAuth,
@@ -46,4 +46,18 @@ router.post(
   })
 );
 
+router.get(
+  "/:id",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.status(200).send({ order });
+      console.log("order sent");
+    } else {
+      console.log("get error");
+      res.status(404).send({ message: "Order Not found" });
+    }
+  })
+);
 module.exports = router;
