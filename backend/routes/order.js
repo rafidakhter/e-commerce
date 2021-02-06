@@ -19,7 +19,6 @@ const { isAuth } = require("../utils/utils");
 router.use(express.json());
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(cors());
-
 //////////////////////////* Insert Order into MongoDB */////////////////////////////////////////
 router.post(
   "/",
@@ -60,4 +59,9 @@ router.get(
     }
   })
 );
+
+router.get("/config/paypal", function (req, res) {
+  console.log("config sent");
+  res.send(process.env.PAYPAL_CLIENT_ID);
+});
 module.exports = router;

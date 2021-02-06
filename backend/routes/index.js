@@ -1,9 +1,19 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+var express = require("express");
+var router = express.Router();
+
+//importing middlware
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
+/////////////////////////middleware//////////////////////////////////
+
+//to handle post requests, dont know exactlyhow it works
+//but it essentialy structures the incoming data for processing
+router.use(express.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+router.use(cors());
 
 module.exports = router;
