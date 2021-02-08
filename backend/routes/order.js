@@ -87,4 +87,17 @@ router.put(
     }
   })
 );
+router.get(
+  "/orderHistory/:id",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    console.log(req.params.id);
+    const orderHistory = await Order.find({ user: req.params.id });
+    if (orderHistory) {
+      res.send({ orderHistory });
+    } else {
+      res.send(404).send({ message: "Order Not Found" });
+    }
+  })
+);
 module.exports = router;
