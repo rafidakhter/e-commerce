@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 
+// generate token for user when logged in and used for authenticaion
 const generateToken = (user) => {
   console.log("generate token");
   return jwt.sign(
@@ -16,6 +17,7 @@ const generateToken = (user) => {
   );
 };
 
+//used to authenticate/grant permission to page
 const isAuth = (req, res, next) => {
   const authorization = req.headers.authorization;
   if (authorization) {
@@ -37,4 +39,13 @@ const isAuth = (req, res, next) => {
   }
 };
 
-module.exports = { generateToken, isAuth };
+// used to authenticate admin page
+const isAdmin = (req, res, next) => {
+  if (req.user && req.user.isAdmin) {
+    next();
+  } else {
+    res.status(401).send({ message: "Invalid Admin Token" });
+  }
+};
+
+module.exports = { generateToken, isAuth, isAdmin };
