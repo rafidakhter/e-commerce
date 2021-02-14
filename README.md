@@ -2,6 +2,7 @@
 # E-commerce Website Project
 
 [https://github.com/rafidakhter/e-commerce-frontend](https://github.com/rafidakhter/e-commerce-frontend)
+[https://www.notion.so/rafidakhter/E-commerce-Website-Project-5c5b2ea98f394e2788a89f204f233ca3](https://www.notion.so/rafidakhter/E-commerce-Website-Project-5c5b2ea98f394e2788a89f204f233ca3)
 
 # Project Overview:
 Created a single page web ecommerce application to practice full stack web development. And creating a detailed description of this project to help others to build up their skills. The project is still incomplete and will be frequently be updated.
