@@ -4,7 +4,7 @@
 [https://github.com/rafidakhter/e-commerce-frontend](https://github.com/rafidakhter/e-commerce-frontend)
 
 # Project Overview:
-I created webpage to practice full stack web development. And creating a detailed description of this project to help others to build up their skills. The project is still incomplete and will be frequently be updated.
+Created a single page web ecommerce application to practice full stack web development. And creating a detailed description of this project to help others to build up their skills. The project is still incomplete and will be frequently be updated.
 
 # Website Overview
 
