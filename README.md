@@ -1,7 +1,9 @@
 
 # E-commerce Website Project
 
+- [ ] link to front end:
 [https://github.com/rafidakhter/e-commerce-frontend](https://github.com/rafidakhter/e-commerce-frontend)
+- [ ] link to notion notebook for this project:
 [https://www.notion.so/rafidakhter/E-commerce-Website-Project-5c5b2ea98f394e2788a89f204f233ca3](https://www.notion.so/rafidakhter/E-commerce-Website-Project-5c5b2ea98f394e2788a89f204f233ca3)
 
 # Project Overview:
