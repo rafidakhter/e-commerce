@@ -1,23 +1,13 @@
-# e-commerce
-e-commerce website
-# E-commerce Website Project
 
-[https://github.com/rafidakhter/e-commerce](https://github.com/rafidakhter/e-commerce)
+# E-commerce Website Project
 
 [https://github.com/rafidakhter/e-commerce-frontend](https://github.com/rafidakhter/e-commerce-frontend)
 
-- **Topics Learnt**
-    - HTML5 and CSS3: Semantic Elements, CSS Grid, Flexbox
-    - React: Components, Props, Events, Hooks, Router, Axios
-    - Redux: Store, Reducers, Actions
-    - Node & Express: Web API, Body Parser, File Upload, JWT
-    - MongoDB: Mongoose, Aggregation
-    - Development: ESLint, Babel, Git, Github,
-    - Deployment: Heroku
+# Project Overview:
+I created webpage to practice full stack web development. And creating a detailed description of this project to help others to build up their skills. The project is still incomplete and will be frequently be updated.
 
 # Website Overview
 
-![E-commerce%20Website%20Project%20a1d003d80613492db1dc8dbb62140e77/Untitled.png](E-commerce%20Website%20Project%20a1d003d80613492db1dc8dbb62140e77/Untitled.png)
 
 E-commerce website with the following requirements
 
@@ -35,8 +25,6 @@ While doing some research on the internet and looking into pre-existing e-commer
 ## Frontend Overview:
 
 The page will have three main components Navbar, Screen, Footer as shown in the figure below. Redux is used as the state management system from the website.
-
-![E-commerce%20Website%20Project%20a1d003d80613492db1dc8dbb62140e77/Untitled%201.png](E-commerce%20Website%20Project%20a1d003d80613492db1dc8dbb62140e77/Untitled%201.png)
 
 The footer is a static component and only displays footer notes. The nav bar has 3 states:
 
