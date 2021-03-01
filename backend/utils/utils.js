@@ -41,10 +41,11 @@ const isAuth = (req, res, next) => {
 
 // used to authenticate admin page
 const isAdmin = (req, res, next) => {
-  if (req.user && req.user.isAdmin) {
+  const user = req.body.user;
+  if (user && user.isAdmin) {
     next();
   } else {
-    res.status(401).send({ message: "Invalid Admin Token" });
+    res.status(401).send({ message: "user not admin" });
   }
 };
 

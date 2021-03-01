@@ -5,6 +5,8 @@ var router = express.Router();
 const expressAsyncHandler = require("express-async-handler");
 
 const { data } = require("../public/data.js");
+const { isAuth } = require("../utils/utils");
+const { isAdmin } = require("../utils/utils");
 const Product = require("../models/productModels.js");
 
 //middleware
@@ -60,6 +62,28 @@ router.get(
     } else {
       res.status(404).send({ message: "Product Not Found" });
     }
+  })
+);
+
+// geting specific product by id
+router.post(
+  "/createProduct",
+  isAdmin,
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const product = new Product({
+      title: "sample name " + Date.now(),
+      image: "/images/p1.jpg",
+      price: 0,
+      category: "sample category",
+      brand: "sample brand",
+      countInStock: 0,
+      rating: 0,
+      numReviews: 0,
+      description: "sample description",
+    });
+    const createdProduct = await product.save();
+    res.send({ message: "Product Created", product: createdProduct });
   })
 );
 

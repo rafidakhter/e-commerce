@@ -19,7 +19,7 @@ var app = express();
 
 // importing env file
 
-// connecting to mongodb
+// connection configuration to mongodb
 mongoose
   .connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
     useNewUrlParser: true,
